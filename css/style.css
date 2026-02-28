@@ -2,11 +2,7 @@
   margin-bottom: 50px;
 }
 
-@media (max-width: 1152px) { 
-  .category-products {
-    gap: 10px;
-  } 
-}
+
 
 /*-------------------------СТАНДАРТ-------------------------------*/
 * {
@@ -36,7 +32,7 @@ main {
 
 a {
   text-decoration: none;
-  font-weight: 600;
+  font-weight: 500;
   color: #1a1a1a;
 }
 
@@ -69,8 +65,13 @@ h2 {
   
 }
 
+input[type="radio"] {
+  accent-color: #000; 
+}
+
+
 .nav-top {
-  padding: 10px;
+  padding-bottom: 10px;
   justify-content: end;
   margin-bottom: 25px;
   border-bottom: #2c2c2c36 solid 1px;
@@ -91,16 +92,22 @@ nav ul {
 }
 
 .logo img {
-  max-width: 80px;
+  max-width: 100px;
 }
 
 /*-------------------------ВИДЖЕТ КОРЗИНЫ-------------------------------*/
 .cart-widget {
   margin-left: auto;
-  padding: 10px 16px;
+  padding: 15px 30px;
   background-color: #f06916;
   border-radius: 15px;
 }
+
+  .bi-basket3{
+      width: 16px;
+      height: auto;
+      margin-bottom: 4px;
+  }
 
 .cart-widget span {
   display: flex;
@@ -111,14 +118,6 @@ nav ul {
 }
 
 /*-------------------------ПРОДУКТ-------------------------------*/
-.category-products {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-  gap: 20px;
-  justify-content: center;
-  margin-bottom: 100px;
-}
-
 .category-products {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
@@ -141,6 +140,7 @@ nav ul {
 .product-card {
   border-radius: 12px;
   padding: 16px;
+  margin-bottom: 30px;
   display: flex;
   flex-direction: column;
   transition: .2s ease;
@@ -348,22 +348,37 @@ button:hover,
 
 /*-------------------------ПОДВАЛ-------------------------------*/
 footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   background-color: #ffffff;
+
+  padding: 100px 0;
 }
 
 .footer-top {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  padding: 50px;
+  width: 100%;
+  max-width: 70%;
 }
 
 .footer-top ul,
 .footer-top div {
+  display: flex;
+  flex-direction: column;
   flex-grow: 1;
 }
 
-.footer-top li {
-  margin-bottom: 10px;
+.footer-top ul li { 
+  margin-bottom: 15px;
+}
+
+
+.footer-top ul li:first-child { 
+  margin-bottom: 25px;
 }
 
 .footer-app {
@@ -425,7 +440,6 @@ footer {
 }
 
 .modal button {
-  padding: 10px;
   border: none;
   background: #f06916;
   color: #f0f0f0;
@@ -615,7 +629,6 @@ footer {
 }
 
 .feedback-form button {
-  padding: 12px;
   background: #ff6a00;
   color: #fff;
   border: none;

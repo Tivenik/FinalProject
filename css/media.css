@@ -1,0 +1,126 @@
+@media (max-width: 1152px) { 
+  .category-products {
+    gap: 10px;
+  } 
+}
+
+@media (max-width: 800px) { 
+
+    p, li {
+        font-size: 20px;
+    }
+
+    .logo {
+        display: none;
+    }
+
+    button {
+        padding: 20px 35px; 
+    }
+
+    .nav-top {
+        justify-content: start;
+    }
+
+    header div,
+    nav ul {
+        gap: 40px;
+    }
+
+    .cart-widget {
+        margin-left: auto;
+        padding: 15px 25px;
+        border-radius: 15px;
+    }
+
+    .feedback-form {
+        max-width: 100%;
+    }
+
+    .cart-widget span{
+        font-size: 20px;
+    }
+
+    .bi-basket3{
+        width: 25px;
+    }
+
+    .about,
+    .proposal,
+    .advantages,
+    .about-contact {
+        flex-direction: column;
+    }
+
+    .about img,
+    .proposal img,
+    .advantages img,
+    .about-contact img {
+        display: none;
+    }
+
+    .advantages-items {
+        flex-direction: column;
+    }
+
+    .advantages-item {
+        padding: 50px;
+        max-width: 500px;
+    }
+
+    .advantages-item p {
+        font-size: 20px;
+    }
+
+    input[type="radio"] {
+        accent-color: #000;
+        width: 30px;
+        height: 30px;
+    }
+
+    .footer-top {
+        gap: 50px;   
+    }
+
+    .footer-top ul {
+        flex-direction: row column;
+        max-width: 200px;
+    }
+
+    .footer-top div {
+        flex-direction: row column;
+        max-width: 200px;
+    }
+}
+
+@media (max-width: 425px) {
+    .cart-widget {
+        display: none;
+    }
+
+    .nav-bottom {
+        justify-content: center;
+    }
+
+    .popup-content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .popup-content img{
+        display: none;
+    }
+
+    .category-products {
+        justify-content: center;
+    }
+
+    .footer-top {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .footer-top ul {
+        max-width: 250px;
+    }
+}

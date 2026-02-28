@@ -25,6 +25,12 @@ link.rel = 'stylesheet';
 link.href = 'css/style.css';
 document.head.appendChild(link);
 
+const media = document.createElement('link');
+media.rel = 'stylesheet';
+media.href = 'css/media.css';
+document.head.appendChild(media);
+
+
 function addToCart(product) {
   let cart = getCookie('cart');
   cart = cart ? JSON.parse(cart) : [];
