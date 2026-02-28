@@ -9,7 +9,7 @@ class Header {
 
   createHeader() {
 
-    //------------------- ВЕРХНИЙ НАВИГАТОР ---------------------
+    // ----------ВЕРХНИЙ НАВИГАТОР----------
 
     const topNav = document.createElement('div');
     topNav.classList.add('nav-top');
@@ -28,7 +28,6 @@ class Header {
     aAbout.href = '#about';
     aAbout.textContent = 'О нас';
     liAbout.append(aAbout);
-    
 
     const liCart = document.createElement('li');
     const aCart = document.createElement('a');
@@ -39,15 +38,15 @@ class Header {
     ul.append(liHome, liAbout, liCart);
     nav.append(ul);
     topNav.append(nav);
-    
     this.item.append(topNav);
 
-    //------------------- НИЖНИЙ НАВИГАТОР (ЯКОРЬ) ---------------------
+    // ----------НИЖНИЙ НАВИГАТОР (ЯКОРЬ)----------
 
     const bottomNav = document.createElement('div');
     bottomNav.classList.add('nav-bottom');
 
     const wrapper = document.createElement('div');
+    wrapper.classList.add('nav-wrapper');
 
     const logo = document.createElement('div');
     logo.classList.add('logo');
@@ -85,17 +84,46 @@ class Header {
     ulB.append(liPizza, liDrink, liCombo);
     navB.append(ulB);
 
-    wrapper.append(logo, navB);
-    this.item.append(wrapper);
+    // ---------- БУРГЕРН ----------
 
+    const burger = document.createElement('div');
+    burger.classList.add('burger');
+    burger.innerHTML = `
+      <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="25" height="25" viewBox="0 0 50 50"
+      style="fill:#FFFFFF;">
+      <path d="M 5 8 A 2.0002 2.0002 0 1 0 5 12 L 45 12 A 2.0002 2.0002 0 1 0 45 8 L 5 8 z M 5 23 A 2.0002 2.0002 0 1 0 5 27 L 45 27 A 2.0002 2.0002 0 1 0 45 23 L 5 23 z M 5 38 A 2.0002 2.0002 0 1 0 5 42 L 45 42 A 2.0002 2.0002 0 1 0 45 38 L 5 38 z"></path>
+      </svg>
+    `;
+
+    wrapper.append(logo, navB, burger);
 
     const cartWidget = document.createElement('div');
     cartWidget.classList.add('cart-widget');
-    this.item.append(cartWidget);
 
-    bottomNav.append(wrapper,cartWidget);
+    bottomNav.append(wrapper, cartWidget);
     this.item.append(bottomNav);
+
+    // ---------- МОБИЛЬНОЕ МЕНЮ ----------
+    
+    const mobileMenu = document.createElement('div');
+    mobileMenu.classList.add('mobile-menu');
+    mobileMenu.innerHTML = `
+      <a href="#contact">Контакты</a>
+      <a href="#about">О нас</a>
+      <a href="#vacancies">Вакансии</a>
+      <a href="#Пицца">Пицца</a>
+      <a href="#Напитки">Напитки</a>
+      <a href="#Комбо">Комбо</a>
+    `;
+    this.item.append(mobileMenu);
+
+    burger.addEventListener('click', () => {
+      burger.classList.toggle('active');
+      mobileMenu.classList.toggle('active');
+    });
   }
+
+
 
   render() {
     return this.item;
