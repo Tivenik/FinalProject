@@ -3,9 +3,8 @@ import { initFeedbackLogic } from "../../components/Feedback/logic.js";
 
 export default function renderContactPage() {
   const page = document.createElement('div');
-  page.classList.add('contact-page');
+  page.classList.add('content-page');
 
-  // Контактная информация
   page.innerHTML = `
     <div class = "block contact-block">
       <h2>Контакты</h2>
@@ -17,7 +16,6 @@ export default function renderContactPage() {
     </div>
   `;
   
-  // Форма обратной связи — теперь ПЕРЕД картой
   const form = createFeedbackForm();
   page.appendChild(form);
 
@@ -39,7 +37,6 @@ export default function renderContactPage() {
 
   page.appendChild(map);
 
-  // Логика формы
   setTimeout(initFeedbackLogic, 0);
 
   return page;

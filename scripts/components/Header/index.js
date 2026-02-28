@@ -12,11 +12,7 @@ class Header {
     //------------------- ВЕРХНИЙ НАВИГАТОР ---------------------
 
     const topNav = document.createElement('div');
-    topNav.classList.add('nav');
-
-    //------------ 
-
-    //------------ 
+    topNav.classList.add('nav-top');
 
     const nav = document.createElement('nav');
     const ul = document.createElement('ul');
@@ -49,7 +45,7 @@ class Header {
     //------------------- НИЖНИЙ НАВИГАТОР (ЯКОРЬ) ---------------------
 
     const bottomNav = document.createElement('div');
-    bottomNav.classList.add('nov-bottom');
+    bottomNav.classList.add('nav-bottom');
 
     const wrapper = document.createElement('div');
 

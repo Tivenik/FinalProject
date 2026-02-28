@@ -2,7 +2,13 @@
   margin-bottom: 50px;
 }
 
-/*База*/
+@media (max-width: 1152px) { 
+  .category-products {
+    gap: 10px;
+  } 
+}
+
+/*-------------------------СТАНДАРТ-------------------------------*/
 * {
   margin: 0;
   padding: 0;
@@ -15,8 +21,17 @@ body {
 }
 
 main {
-  display: block;
-  padding: 0px 150px 150px 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+ /* padding: 0px 150px 0 150px;*/
+}
+
+
+.content-page {
+  width: 100%;
+  max-width:70%;
 }
 
 a {
@@ -46,16 +61,17 @@ h2 {
   margin-bottom: 100px;
 }
 
-/*header*/
-.nav,
+/*-------------------------ШАПКА-------------------------------*/
+.nav-top,
 .nav-bottom{
   display: flex;
   gap: 20px;
   
 }
 
-.nav {
+.nav-top {
   padding: 10px;
+  justify-content: end;
   margin-bottom: 25px;
   border-bottom: #2c2c2c36 solid 1px;
 }
@@ -78,11 +94,7 @@ nav ul {
   max-width: 80px;
 }
 
-main {
-  margin-bottom: 30px;
-}
-
-/* Виджет корзины */
+/*-------------------------ВИДЖЕТ КОРЗИНЫ-------------------------------*/
 .cart-widget {
   margin-left: auto;
   padding: 10px 16px;
@@ -98,7 +110,15 @@ main {
   align-items: center;
 }
 
-/*product*/
+/*-------------------------ПРОДУКТ-------------------------------*/
+.category-products {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 20px;
+  justify-content: center;
+  margin-bottom: 100px;
+}
+
 .category-products {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
@@ -116,7 +136,7 @@ main {
   margin-bottom: 100px;
 }
 
-/* Карточка */
+/*------------------------КАРТОЧКА ПРОДУКТА-------------------------------*/
 .carusel-product-card,
 .product-card {
   border-radius: 12px;
@@ -155,7 +175,6 @@ main {
   margin-bottom: 10px;
 }
 
-/* Размеры */
 .pizza-size {
   display: flex;
   justify-content: space-between;
@@ -172,7 +191,6 @@ main {
   cursor: pointer;
 }
 
-/* Цена */
 .price {
   font-size: 20px;
   font-weight: 900;
@@ -180,7 +198,6 @@ main {
   margin-bottom: 12px;
 }
 
-/* Кнопка */
 .add-to-cart,
 button {
   background-color: #f06916;
@@ -198,7 +215,7 @@ button:hover,
   background-color: #d29422;
 }
 
-/*Corusel*/
+/*-------------------------КАРУСЕЛЬ-------------------------------*/
 .product-carousel {
   position: relative;
   display: flex;
@@ -329,9 +346,9 @@ button:hover,
   background: #000c;
 }
 
-/*footer*/
+/*-------------------------ПОДВАЛ-------------------------------*/
 footer {
-  background-color: #f0f0f0;
+  background-color: #ffffff;
 }
 
 .footer-top {
@@ -482,6 +499,10 @@ footer {
 }
 
 /*ЧТО МЫ ПРЕДЛОГАЕМ*/
+.proposal {
+  justify-content: end;
+}
+
 .proposal img {
   max-width: 390px;
 }
@@ -501,12 +522,18 @@ footer {
   max-width: 390px;
 }
 
+.advantages-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+
+}
+
 .advantages-items {
   display: flex;
   flex-wrap: wrap;
   max-width: 600px;
   gap: 20px;
-  padding: 20px;
 }
 
 .advantages-item {
@@ -523,6 +550,10 @@ footer {
 }
 .advantages-item strong{
   color: #f06916;
+}
+
+.about-contact {
+  justify-content: end;
 }
 
 .about {

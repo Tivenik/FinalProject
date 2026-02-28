@@ -3,7 +3,7 @@ import { initFeedbackLogic } from "../../components/Feedback/logic.js";
 
 export default function renderVacanciesPage() {
   const page = document.createElement('div');
-  page.classList.add('vacancies-page');
+  page.classList.add('content-page');
 
   page.innerHTML = `
     <div class="block vacancies-block">

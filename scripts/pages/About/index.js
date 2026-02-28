@@ -1,6 +1,6 @@
 export default function renderAbout() {
   const div = document.createElement('div');
-  div.classList.add('about-page');
+  div.classList.add('content-page');
 
     div.innerHTML = `
       <div class="about">
@@ -25,6 +25,7 @@ export default function renderAbout() {
       </div>
 
       <div class="block advantages">
+        <img src="../../image/bouncy-yellow-cup.svg" alt="#"> 
         <div class="advantages-block">
           <h2>Почему выбирают нас</h2>
           <div class="advantages-items">
@@ -45,7 +46,6 @@ export default function renderAbout() {
             </div>
           </div>
         </div>
-        <img src="../../image/bouncy-yellow-cup.svg" alt="#"> 
       </div>
 
       <div class= "block about-contact">

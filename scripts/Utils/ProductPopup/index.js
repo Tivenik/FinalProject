@@ -5,11 +5,9 @@ class ProductPopup {
   }
 
   open() {
-    // затемнение фона
     const overlay = document.createElement('div');
     overlay.classList.add('popup-overlay');
 
-    // само окно
     const popup = document.createElement('div');
     popup.classList.add('popup');
 
@@ -32,13 +30,11 @@ class ProductPopup {
 
     this.popup = overlay;
 
-    // закрытие
     popup.querySelector('.popup-close').addEventListener('click', () => this.close());
     overlay.addEventListener('click', e => {
       if (e.target === overlay) this.close();
     });
 
-    // добавление в корзину
     popup.querySelector('.add-to-cart').addEventListener('click', () => {
       let cart = JSON.parse(getCookie('cart') || "[]");
       cart.push(this.product);

@@ -4,8 +4,14 @@ import { renderCartWidget } from "../../Utils/Widget/index.js";
 class Cart {
     constructor() {
         this.item = document.createElement('main');
-        this.item.classList.add('cart-page');
+        this.item.classList.add('main');
+
+        this.content = document.createElement('div');
+        this.content.classList.add('content-page');
+
+        this.item.appendChild(this.content);
     }
+
 
     getCartItems() {
         const cart = getCookie('cart');
@@ -30,7 +36,7 @@ class Cart {
     }
 
     render() {
-        this.item.innerHTML = "";
+        this.content.innerHTML = "";
 
         const items = this.getCartItems();
         const container = document.createElement('div');
@@ -38,13 +44,11 @@ class Cart {
 
         const validItems = items.filter(item => item && item.price != null);
 
-        // если корзина пустая → используем единый метод
         if (validItems.length === 0) {
-            this.renderEmptyCart(this.item);
+            this.renderEmptyCart(this.content);
             return this.item;
         }
 
-        // товары
         validItems.forEach((product, index) => {
             const div = document.createElement('div');
             div.classList.add('cart-item');
@@ -62,7 +66,6 @@ class Cart {
             container.appendChild(div);
         });
 
-        // нижняя часть корзины
         const bottomBlock = document.createElement('div');
         bottomBlock.classList.add('cart-bottom');
 
@@ -82,9 +85,10 @@ class Cart {
 
         container.appendChild(bottomBlock);
 
-        this.item.appendChild(container);
+        this.content.appendChild(container);
         return this.item;
     }
+
 }
 
 export default Cart;

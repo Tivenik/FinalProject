@@ -15,12 +15,15 @@ const footer = new Footer().render();
 root.append(header, footer);
 renderCartWidget();
 
+const meta = document.createElement('meta');
+meta.name = "viewport";
+meta.content = "width=device-width, initial-scale=1";
+document.head.appendChild(meta);
 
 const link = document.createElement('link');
 link.rel = 'stylesheet';
 link.href = 'css/style.css';
 document.head.appendChild(link);
-
 
 function addToCart(product) {
   let cart = getCookie('cart');
@@ -40,7 +43,6 @@ document.addEventListener('click', (e) => {
   }
 });
 
-// единая функция рендера по хэшу
 function renderPage() {
   const oldMain = document.querySelector('main');
   if (oldMain) oldMain.remove();
@@ -49,40 +51,33 @@ function renderPage() {
   const hash = window.location.hash;
 
   if (hash.startsWith('#product/')) {
-    const id = parseInt(hash.split('/')[1]); // достаём ID товара
+    const id = parseInt(hash.split('/')[1]);
     page = new ProductPage(id).render();
   } else {
     switch (hash) {
       case '#catalog':
-        page = new Main().render(); // каталог
+        page = new Main().render();
         break;
       case '#cart':
-        page = new Cart().render(); // корзина
+        page = new Cart().render();
         break;
       default:
-        page = new Main().render(); // главная
+        page = new Main().render();
     }
   }
 
   root.insertBefore(page, footer);
 }
 
-// слушаем изменения хэша
 window.addEventListener('hashchange', renderPage);
 
 import App from "./components/App/App.js";
 
-const app = new App(); // создаём экземпляр
+const app = new App();
 
 async function start() {
-  await app.fetchProducts(); // теперь работает
+  await app.fetchProducts();
   renderPage();
 }
 
 start();
-
-
-
-
-
-

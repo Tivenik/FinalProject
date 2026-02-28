@@ -17,7 +17,7 @@ export function createProductCarousel(products) {
 
   products.forEach(product => {
     const card = document.createElement('div');
-    card.classList.add('carusel-product-card'); // ← тот же класс, что в renderProducts
+    card.classList.add('carusel-product-card');
 
     card.innerHTML = `
       <a href="#product/${product.id}" class="product-link">
@@ -28,7 +28,6 @@ export function createProductCarousel(products) {
       <button class="add-to-cart">В корзину</button>
     `;
 
-    // логика добавления в корзину — такая же, как в renderProducts
     card.querySelector('.add-to-cart').addEventListener('click', () => {
       let cart = JSON.parse(getCookie('cart') || "[]");
       cart.push(product);
