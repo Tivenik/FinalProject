@@ -5,7 +5,8 @@
       "title": "Маргарита",
       "price": 12.99,
       "description": "База с томатным соусом, моцареллой, базиликом",
-      "image": "../image/products/margarita.jpg",
+      "image": "../image/products/Pizza.png",
+      "weight": "450гр",
       "category": "Пицца"
     },
     {
@@ -13,7 +14,8 @@
       "title": "Маринара",
       "price": 14.99,
       "description": "Старейшая неаполитанская пицца с томатами, чесноком, орегано и оливковым маслом",
-      "image": "../image/products/marinara.jpg",
+      "image": "../image/products/Pizza.png",
+      "weight": "450гр",
       "category": "Пицца"
     },
     {
@@ -21,7 +23,8 @@
       "title": "Четыре сезона",
       "price": 12.99,
       "description": "Разделена на четыре части, символизирующие времена года: грибы, ветчина, артишоки, оливки.",
-      "image": "../image/products/four_seasons.jpg",
+      "image": "../image/products/Pizza.png",
+      "weight": "450гр",
       "category": "Пицца"
     },
     {
@@ -29,7 +32,8 @@
       "title": "Четыре сыра",
       "price": 14.99,
       "description": "смесь моцареллы, горгонзолы, пармезана и эмменталя",
-      "image": "../image/products/four_cheeses.jpg",
+      "image": "../image/products/Pizza.png",
+      "weight": "450гр",
       "category": "Пицца"
     },
     {
@@ -37,7 +41,8 @@
       "title": "Капричоза",
       "price": 12.99,
       "description": "грибы, ветчина, артишоки, оливки",
-      "image": "../image/products/caprice.jpg",
+      "image": "../image/products/Pizza.png",
+      "weight": "450гр",
       "category": "Пицца"
     },
     {
@@ -45,7 +50,8 @@
       "title": "Диабло",
       "price": 14.99,
       "description": "Пицца с острой салями",
-      "image": "../image/products/diablo.jpg",
+      "image": "../image/products/Pizza.png",
+      "weight": "450гр",
       "category": "Пицца"
     },
     {
@@ -53,7 +59,17 @@
       "title": "Кальцоне",
       "price": 12.99,
       "description": "«Закрытая» пицца в виде конверта",
-      "image": "../image/products/calzone.jpg",
+      "image": "../image/products/Pizza.png",
+      "weight": "450гр",
+      "category": "Пицца"
+    },
+    {
+      "id": 107,
+      "title": "Пицца римская",
+      "price": 12.99,
+      "description": "Помидоры со специями, бекон, моцареллу, пармезана",
+      "image": "../image/products/Pizza.png",
+      "weight": "450гр",
       "category": "Пицца"
     },
     {
@@ -61,7 +77,8 @@
       "title": "Газировка",
       "price": 12.99,
       "description": "База с томатным соусом, моцареллой, базиликом",
-      "image": "../image/products/soda.png",
+      "image": "../image/products/Cola.png",
+      "weight": "0.5л",
       "category": "Напитки"
     },
     {
@@ -69,7 +86,8 @@
       "title": "Газировка лимон",
       "price": 12.99,
       "description": "База с томатным соусом, моцареллой, базиликом",
-      "image": "../image/products/soda.png",
+      "image": "../image/products/Cola.png",
+      "weight": "0.5л",
       "category": "Напитки"
     },
     {
@@ -77,7 +95,8 @@
       "title": "Газировка апелсин",
       "price": 12.99,
       "description": "База с томатным соусом, моцареллой, базиликом",
-      "image": "../image/products/soda.png",
+      "image": "../image/products/Cola.png",
+      "weight": "0.5л",
       "category": "Напитки"
     },
     {
@@ -85,7 +104,8 @@
       "title": "Квас",
       "price": 12.99,
       "description": "База с томатным соусом, моцареллой, базиликом",
-      "image": "../image/products/soda.png",
+      "image": "../image/products/Cola.png",
+      "weight": "0.5л",
       "category": "Напитки"
     },
     {
@@ -93,7 +113,8 @@
       "title": "Вода",
       "price": 12.99,
       "description": "База с томатным соусом, моцареллой, базиликом",
-      "image": "../image/products/soda.png",
+      "image": "../image/products/Water.png",
+      "weight": "0.5л",
       "category": "Напитки"
     },
     {
@@ -101,55 +122,53 @@
       "title": "Вода газированная",
       "price": 12.99,
       "description": "База с томатным соусом, моцареллой, базиликом",
-      "image": "../image/products/soda.png",
+      "image": "../image/products/Water.png",
+      "weight": "0.5л",
+      "category": "Напитки"
+    },
+    {
+      "id": 207,
+      "title": "Кофе",
+      "price": 12.99,
+      "description": "База с томатным соусом, моцареллой, базиликом",
+      "image": "../image/products/Coffe.png",
+      "weight": "0.45л",
+      "category": "Напитки"
+    },
+    {
+      "id": 208,
+      "title": "Чай",
+      "price": 12.99,
+      "description": "База с томатным соусом, моцареллой, базиликом",
+      "image": "../image/products/Tea.png",
+      "weight": "0.45л",
+      "category": "Напитки"
+    },
+    {
+      "id": 301,
+      "title": "Комбо 1",
+      "price": 12.99,
+      "description": "База с томатным соусом, моцареллой, базиликом",
+      "image": "../image/products/Combo_2.png",
+      "weight": "0.5л + 450гр",
       "category": "Комбо"
     },
     {
-      "id": 201,
-      "title": "Газировка",
+      "id": 302,
+      "title": "Комбо 2",
       "price": 12.99,
       "description": "База с томатным соусом, моцареллой, базиликом",
-      "image": "../image/products/soda.png",
+      "image": "../image/products/Combo_1.png",
+      "weight": "900гр",
       "category": "Комбо"
     },
     {
-      "id": 202,
-      "title": "Газировка лимон",
+      "id": 303,
+      "title": "Комбо 3",
       "price": 12.99,
       "description": "База с томатным соусом, моцареллой, базиликом",
-      "image": "../image/products/soda.png",
-      "category": "Комбо"
-    },
-    {
-      "id": 203,
-      "title": "Газировка апелсин",
-      "price": 12.99,
-      "description": "База с томатным соусом, моцареллой, базиликом",
-      "image": "../image/products/soda.png",
-      "category": "Комбо"
-    },
-    {
-      "id": 204,
-      "title": "Квас",
-      "price": 12.99,
-      "description": "База с томатным соусом, моцареллой, базиликом",
-      "image": "../image/products/soda.png",
-      "category": "Сombo"
-    },
-    {
-      "id": 205,
-      "title": "Вода",
-      "price": 12.99,
-      "description": "База с томатным соусом, моцареллой, базиликом",
-      "image": "../image/products/soda.png",
-      "category": "Комбо"
-    },
-    {
-      "id": 206,
-      "title": "Вода газированная",
-      "price": 12.99,
-      "description": "База с томатным соусом, моцареллой, базиликом",
-      "image": "../image/products/soda.png",
+      "image": "../image/products/Combo_2.png",
+      "weight": "0.5л + 450гр",
       "category": "Комбо"
     }
   ]

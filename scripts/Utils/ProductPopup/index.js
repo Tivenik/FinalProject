@@ -18,8 +18,12 @@ class ProductPopup {
         <img src="${this.product.image}" alt="${this.product.title}">
         <div class="popup-info">
           <h2>${this.product.title}</h2>
-          <span class="price"><strong>Цена:</strong> ${this.product.price} $</span>
-          <p><strong>Описание:</strong> ${this.product.description}</p>
+            ${this.product.description}
+          <div class="text_block">
+            <span class="price"> ${this.product.price} $</span>
+            <span class="weight">${this.product.weight}</span>
+          <div class="text_block">
+          </p>
           <button class="add-to-cart">В корзину</button>
         </div>
       </div>

@@ -22,12 +22,13 @@ export default function createProductCard(product) {
         <label><input type="radio" name="size-${product.id}" value="l"> L</label>
       </div>
     ` : ''}
-
-    <p class="price">${basePrice} $</p>
+    <div class="text-block">
+    <span class="price">${basePrice} $</span>
+    <span class="weight">${product.weight}</span>
+    </div>
     <button class="add-to-cart">В корзину</button>
   `;
 
-  // попап
   card.querySelector('.product-link').addEventListener('click', () => {
     const popup = new ProductPopup(product);
     popup.open();

@@ -71,7 +71,7 @@ input[type="radio"] {
 }
 
 .nav-top {
-  padding-bottom: 10px;
+  padding-bottom: 15px;
   justify-content: end;
   margin-bottom: 25px;
   border-bottom: #2c2c2c36 solid 1px;
@@ -91,7 +91,21 @@ header div,
 nav ul {
   display: flex;
   align-items: center;
-  gap: 20px;
+}
+
+header a {
+  padding: 15px 25px;
+  font-weight: 600;
+  border-radius: 100px;
+}
+
+header ul a:hover {
+  background-color: #f06a161f;
+}
+
+header ul a:active {
+  background-color: #f06a16;
+  color: #ffffff;
 }
 
 .logo-top {
@@ -105,7 +119,6 @@ nav ul {
 /*-------------------------ВИДЖЕТ КОРЗИНЫ-------------------------------*/
 .cart-widget {
   margin-left: auto;
-  padding: 15px 30px;
   background-color: #f06916;
   border-radius: 10px;
 }
@@ -126,10 +139,10 @@ nav ul {
 
 /*-------------------------ПРОДУКТ-------------------------------*/
 .category-products {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
   gap: 20px;
-  justify-content: center;
+  justify-content: start;
   margin-bottom: 100px;
 }
 
@@ -143,44 +156,49 @@ nav ul {
 }
 
 /*------------------------КАРТОЧКА ПРОДУКТА-------------------------------*/
-.carusel-product-card,
 .product-card {
   border-radius: 12px;
-  padding: 16px;
+  padding: 20px;
   margin-bottom: 30px;
   display: flex;
   flex-direction: column;
   transition: .2s ease;
-  max-width: 280px;
 
   cursor: pointer;
 }
 
-.carusel-product-card,
-.product-card {
+.product-card:hover {
   box-shadow: 2px 2px 10px 6px rgba(77, 77, 77, 0.2);
 }
 
-.carusel-product-card:hover,
-.product-card:hover {
-  box-shadow: 2px 2px 5px 2px rgba(77, 77, 77, 0.2);
+.text-block {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.weight {
+  margin-left: auto;
+  font-size: 18px;
+  color: #1a1a1a8e;
 }
 
 /* Картинка */
 .product-link img {
-  width: calc(100% + 32px);
-  margin: -16px -16px 16px -16px;
-  height: 180px;
-  object-fit: cover;
+  max-height: 250px;
   border-radius: 10px;
 }
 
-/* Название */
-.carusel-product-card
 .product-card h3 {
   font-size: 18px;
   margin-bottom: 10px;
 }
+
+  input[type="radio"] {
+    accent-color: #f06916;
+    width: 25px;
+    height: 25px;
+  }
 
 .pizza-size {
   display: flex;
@@ -201,8 +219,7 @@ nav ul {
 .price {
   font-size: 20px;
   font-weight: 900;
-  color: #D26522;
-  margin-bottom: 12px;
+  color: #f06916;
 }
 
 .add-to-cart,
