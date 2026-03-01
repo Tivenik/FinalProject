@@ -7,12 +7,14 @@ export default function renderHome(products, createProductCard) {
   const slider = createSlider ([
   {
     mobile: "image/slider1-mobile.jpg",
-    tablet: "image/slider1-tablet.jpg",
     desktop: "image/slider1.jpg"
   },
   {
+    mobile: "image/slider2-mobile.jpg",
+    desktop: "image/slider2.jpg"
+  },
+  {
     mobile: "image/slider3-mobile.jpg",
-    tablet: "image/slider3-tablet.jpg",
     desktop: "image/slider3.jpg"
   }
 ]);
