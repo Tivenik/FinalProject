@@ -1,0 +1,167 @@
+@media (max-width: 1152px) { 
+  .category-products {
+    gap: 10px;
+  } 
+}
+
+@media (max-width: 800px) { 
+    
+    textarea[type="text"],
+    input[type="text"],
+    input[type="email"],
+    input[type="text"] {
+        padding: 20px;
+        font-size: 20px;
+    }
+
+    textarea {
+        padding: 20px;
+        font-size: 20px;  
+    }
+
+    p, li, lable, span {
+        font-size: 20px;
+    }
+
+    .logo {
+        display: none;
+    }
+
+    button {
+        padding: 20px 35px; 
+    }
+
+    .nav-top {
+        justify-content: start;
+    }
+
+    header div,
+    nav ul {
+        gap: 40px;
+    }
+
+    .cart-widget {
+        margin-left: auto;
+    }
+
+    .feedback-form {
+        max-width: 100%;
+    }
+
+    .cart-widget span{
+        font-size: 20px;
+    }
+
+    .bi-basket3{
+        width: 25px;
+    }
+
+    .about,
+    .proposal,
+    .advantages,
+    .about-contact {
+        flex-direction: column;
+    }
+
+    .about img,
+    .proposal img,
+    .advantages img,
+    .about-contact img {
+        display: none;
+    }
+
+    .advantages-items {
+        flex-direction: column;
+    }
+
+    .advantages-item {
+        padding: 50px;
+    }
+
+    .advantages-item p {
+        font-size: 20px;
+    }
+
+    .footer-top {
+        gap: 50px;   
+    }
+
+    .footer-top ul {
+        flex-direction: row column;
+        max-width: 200px;
+    }
+
+    .footer-top div {
+        flex-direction: row column;
+        max-width: 200px;
+    }
+
+    .mobile_app {
+        max-width: 300px;
+    }
+    
+}
+
+@media (max-width: 800px) {
+
+    .nav-bottom {
+        justify-content: center;
+    }
+
+    .popup-content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .popup-content img{
+        max-height: 300px;
+    }
+
+    .category-products {
+        justify-content: center;
+    }
+
+    .footer-top {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .footer-top ul {
+        max-width: 250px;
+        border-bottom: #2c2c2c36 solid 1px;
+    }
+
+    .nav-top {
+        justify-content: center;
+    }
+
+    .logo-top img{
+        max-width: 300px;
+    }
+
+    .logo-top {
+        display: flex;
+    }
+
+    .nav-top nav,
+    .nav-bottom nav {
+        display: none;
+    }
+
+    .burger {
+        display: flex;
+    }
+
+    .cart-items {
+        padding: 50px 0 50px 0;
+    }
+
+    .popup-close {
+        display: flex;
+    }
+
+    .mobile-menu a{
+        display: flex;
+        justify-content: start;
+    }
+}
