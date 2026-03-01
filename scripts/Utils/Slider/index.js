@@ -9,10 +9,17 @@ export function createSlider(images) {
     const slide = document.createElement('div');
     slide.className = 'slide';
 
-    const img = document.createElement('img');
-    img.src = src;
+    const picture = document.createElement('picture');
 
-    slide.appendChild(img);
+    const mobile = document.createElement('source');
+    mobile.srcset = src.mobile;
+    mobile.media = "(max-width: 768px)";
+
+    const img = document.createElement('img');
+    img.src = src.desktop;
+
+    picture.append(mobile, img);
+    slide.appendChild(picture);
     track.appendChild(slide);
   });
 

@@ -5,13 +5,21 @@
 }
 
 @media (max-width: 800px) { 
-
+    
+    textarea[type="text"],
+    input[type="text"],
+    input[type="email"],
     input[type="text"] {
         padding: 20px;
         font-size: 20px;
     }
 
-    p, li, .lable, span {
+    textarea {
+        padding: 20px;
+        font-size: 20px;  
+    }
+
+    p, li, lable, span {
         font-size: 20px;
     }
 
@@ -34,7 +42,6 @@
 
     .cart-widget {
         margin-left: auto;
-        padding: 10px 20px;
     }
 
     .feedback-form {
@@ -69,7 +76,6 @@
 
     .advantages-item {
         padding: 50px;
-        max-width: 500px;
     }
 
     .advantages-item p {
@@ -96,7 +102,7 @@
     
 }
 
-@media (max-width: 655px) {
+@media (max-width: 800px) {
 
     .nav-bottom {
         justify-content: center;
@@ -148,5 +154,14 @@
 
     .cart-items {
         padding: 50px 0 50px 0;
+    }
+
+    .popup-close {
+        display: flex;
+    }
+
+    .mobile-menu a{
+        display: flex;
+        justify-content: start;
     }
 }

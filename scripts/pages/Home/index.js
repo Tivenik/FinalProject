@@ -4,11 +4,19 @@ export default function renderHome(products, createProductCard) {
   const container = document.createElement('div');
   container.classList.add('content-page');
 
-  const slider = createSlider([
-    'image/slider1.jpg',
-    'image/slider2.jpg',
-    'image/slider3.jpg'
-  ]);
+  const slider = createSlider ([
+  {
+    mobile: "image/slider1-mobile.jpg",
+    tablet: "image/slider1-tablet.jpg",
+    desktop: "image/slider1.jpg"
+  },
+  {
+    mobile: "image/slider3-mobile.jpg",
+    tablet: "image/slider3-tablet.jpg",
+    desktop: "image/slider3.jpg"
+  }
+]);
+
   container.appendChild(slider);
 
   const productsBlock = document.createElement('div');
