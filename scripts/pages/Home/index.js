@@ -1,5 +1,4 @@
 import { createSlider } from "../../Utils/Slider/index.js";
-import { createProductCarousel } from "../../Utils/Carousel/index.js";
 
 export default function renderHome(products, createProductCard) {
   const container = document.createElement('div');
@@ -11,9 +10,6 @@ export default function renderHome(products, createProductCard) {
     'image/slider3.jpg'
   ]);
   container.appendChild(slider);
-
-  const carousel = createProductCarousel(products);
-  container.appendChild(carousel);
 
   const productsBlock = document.createElement('div');
   productsBlock.classList.add('products');

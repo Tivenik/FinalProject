@@ -1,7 +1,6 @@
 import renderHome from "../pages/Home/index.js";
 import renderAbout from "../pages/About/index.js";
 import renderCartPage from "../pages/CartPage/index.js";
-import renderProductPage from "../pages/ProductPage/index.js";
 import renderContactPage from "../pages/Contact/index.js";
 import renderVacanciesPage from "../pages/Vacancies/index.js";
 import createProductCard from "../Utils/СreateProductCard/index.js";

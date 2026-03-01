@@ -4,7 +4,6 @@ import Main from "./Main/index.js";
 import Footer from "./components/Footer/index.js";
 import Cart from './components/Cart/index.js';
 import { setCookie, getCookie } from "./cookies/index.js";
-import ProductPage from "./Utils/Product/index.js";
 import { renderCartWidget } from "./Utils/Widget/index.js";
 
 const root = document.getElementById('root');
