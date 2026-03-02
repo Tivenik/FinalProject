@@ -25,7 +25,7 @@ class Cart {
         setCookie('cart', JSON.stringify(items));
 
         this.render();
-        renderCartWidget();
+        document.dispatchEvent(new Event('cart-updated'));
     }
 
     renderEmptyCart(target) {

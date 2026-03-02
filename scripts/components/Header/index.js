@@ -5,6 +5,9 @@ class Header {
     this.item = document.createElement('header');
     this.item.classList.add('header');
     this.createHeader();
+
+    document.addEventListener('cart-updated', renderCartWidget);
+    renderCartWidget();
   }
 
   createHeader() {
@@ -96,7 +99,7 @@ class Header {
     ulB.append(liPizza, liDrink, liCombo);
     navB.append(ulB);
 
-    // ---------- БУРГЕРН ----------
+    // ---------- БУРГЕР ----------
 
     const burger = document.createElement('div');
     burger.classList.add('burger');
@@ -154,8 +157,6 @@ class Header {
     });
 
   }
-
-
 
   render() {
     return this.item;

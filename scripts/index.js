@@ -40,14 +40,6 @@ function addToCart(product) {
   renderCartWidget();
 }
 
-document.addEventListener('click', (e) => {
-  if (e.target.classList.contains('add-to-cart')) {
-    const products = JSON.parse(localStorage.getItem('products')) || [];
-    const index = [...document.querySelectorAll('.add-to-cart')].indexOf(e.target);
-    addToCart(products[index]);
-  }
-});
-
 function renderPage() {
   const oldMain = document.querySelector('main');
   if (oldMain) oldMain.remove();
