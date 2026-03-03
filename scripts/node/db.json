@@ -4,72 +4,72 @@
       "id": 101,
       "title": "Маргарита",
       "price": 12.99,
-      "description": "База с томатным соусом, моцареллой, базиликом",
+      "description": "Классическая неаполитанская пицца с томатным соусом, свежей моцареллой и ароматным базиликом.",
       "image": "../image/products/Pizza.png",
-      "weight": "450гр",
+      "weight": 450,
       "category": "Пицца"
     },
     {
       "id": 102,
       "title": "Маринара",
       "price": 14.99,
-      "description": "Старейшая неаполитанская пицца с томатами, чесноком, орегано и оливковым маслом",
+      "description": "Традиционная пицца с томатами, чесноком, орегано и оливковым маслом — простой и яркий вкус.",
       "image": "../image/products/Pizza.png",
-      "weight": "450гр",
+      "weight": 450,
       "category": "Пицца"
     },
     {
       "id": 103,
       "title": "Четыре сезона",
       "price": 12.99,
-      "description": "Разделена на четыре части, символизирующие времена года: грибы, ветчина, артишоки, оливки.",
+      "description": "Пицца, разделённая на четыре части: грибы, ветчина, артишоки и оливки — символ вкусов всех времён года.",
       "image": "../image/products/Pizza.png",
-      "weight": "450гр",
+      "weight": 450,
       "category": "Пицца"
     },
     {
       "id": 104,
       "title": "Четыре сыра",
       "price": 14.99,
-      "description": "смесь моцареллы, горгонзолы, пармезана и эмменталя",
+      "description": "Нежная смесь моцареллы, горгонзолы, пармезана и эмменталя с насыщенным сливочным вкусом.",
       "image": "../image/products/Pizza.png",
-      "weight": "450гр",
+      "weight": 450,
       "category": "Пицца"
     },
     {
       "id": 105,
       "title": "Капричоза",
       "price": 12.99,
-      "description": "грибы, ветчина, артишоки, оливки",
+      "description": "Сочетание ветчины, грибов, артишоков и оливок в классическом итальянском стиле.",
       "image": "../image/products/Pizza.png",
-      "weight": "450гр",
+      "weight": 450,
       "category": "Пицца"
     },
     {
       "id": 106,
       "title": "Диабло",
       "price": 14.99,
-      "description": "Пицца с острой салями",
+      "description": "Острая пицца с салями и томатным соусом для тех, кто любит яркую остроту.",
       "image": "../image/products/Pizza.png",
-      "weight": "450гр",
+      "weight": 450,
       "category": "Пицца"
     },
     {
       "id": 107,
       "title": "Кальцоне",
       "price": 12.99,
-      "description": "«Закрытая» пицца в виде конверта",
+      "description": "Закрытая пицца в форме конверта с тягучей начинкой и мягким тестом.",
       "image": "../image/products/Pizza.png",
-      "weight": "450гр",
+      "weight": 450,
       "category": "Пицца"
     },
     {
       "id": 107,
       "title": "Пицца римская",
       "price": 12.99,
-      "description": "Помидоры со специями, бекон, моцареллу, пармезана",
+      "description": "Тонкое тесто с томатами, беконом, моцареллой и пармезаном — насыщенный вкус в римской традиции.",
       "image": "../image/products/Pizza.png",
-      "weight": "450гр",
+      "weight": 450,
       "category": "Пицца"
     },
     {
@@ -78,7 +78,7 @@
       "price": 12.99,
       "description": "База с томатным соусом, моцареллой, базиликом",
       "image": "../image/products/Cola.png",
-      "weight": "0.5л",
+      "weight": 0.5,
       "category": "Напитки"
     },
     {
@@ -87,7 +87,7 @@
       "price": 12.99,
       "description": "База с томатным соусом, моцареллой, базиликом",
       "image": "../image/products/Cola.png",
-      "weight": "0.5л",
+      "weight": 0.5,
       "category": "Напитки"
     },
     {
@@ -96,7 +96,7 @@
       "price": 12.99,
       "description": "База с томатным соусом, моцареллой, базиликом",
       "image": "../image/products/Cola.png",
-      "weight": "0.5л",
+      "weight": 0.5,
       "category": "Напитки"
     },
     {
@@ -105,7 +105,7 @@
       "price": 12.99,
       "description": "База с томатным соусом, моцареллой, базиликом",
       "image": "../image/products/Cola.png",
-      "weight": "0.5л",
+      "weight": 0.5,
       "category": "Напитки"
     },
     {
@@ -114,7 +114,7 @@
       "price": 12.99,
       "description": "База с томатным соусом, моцареллой, базиликом",
       "image": "../image/products/Water.png",
-      "weight": "0.5л",
+      "weight": 0.5,
       "category": "Напитки"
     },
     {
@@ -123,7 +123,7 @@
       "price": 12.99,
       "description": "База с томатным соусом, моцареллой, базиликом",
       "image": "../image/products/Water.png",
-      "weight": "0.5л",
+      "weight": 0.5,
       "category": "Напитки"
     },
     {
@@ -132,7 +132,7 @@
       "price": 12.99,
       "description": "База с томатным соусом, моцареллой, базиликом",
       "image": "../image/products/Coffe.png",
-      "weight": "0.45л",
+      "weight": 0.45,
       "category": "Напитки"
     },
     {
@@ -141,34 +141,34 @@
       "price": 12.99,
       "description": "База с томатным соусом, моцареллой, базиликом",
       "image": "../image/products/Tea.png",
-      "weight": "0.45л",
+      "weight": 0.45,
       "category": "Напитки"
     },
     {
       "id": 301,
       "title": "Комбо 1",
-      "price": 12.99,
-      "description": "База с томатным соусом, моцареллой, базиликом",
+      "price": 39,
+      "description": "Комбо",
       "image": "../image/products/Combo_2.png",
-      "weight": "0.5л + 450гр",
+      "weight": "0.5л + 450 г",
       "category": "Комбо"
     },
     {
       "id": 302,
       "title": "Комбо 2",
-      "price": 12.99,
-      "description": "База с томатным соусом, моцареллой, базиликом",
+      "price": 18,
+      "description": "Комбо",
       "image": "../image/products/Combo_1.png",
-      "weight": "900гр",
+      "weight": "900 г",
       "category": "Комбо"
     },
     {
       "id": 303,
       "title": "Комбо 3",
-      "price": 12.99,
-      "description": "База с томатным соусом, моцареллой, базиликом",
+      "price": 20,
+      "description": "Комбо",
       "image": "../image/products/Combo_2.png",
-      "weight": "0.5л + 450гр",
+      "weight": "0.5л + 450г",
       "category": "Комбо"
     }
   ]
