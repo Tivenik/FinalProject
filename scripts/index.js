@@ -1,4 +1,3 @@
-import './components/App/App.js';
 import Header from "./components/Header/index.js";
 import Main from "./Main/index.js";
 import Footer from "./components/Footer/index.js";

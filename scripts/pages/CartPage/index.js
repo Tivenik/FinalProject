@@ -1,5 +1,5 @@
-import Cart from "../../components/Cart/index.js";
+  import Cart from "../../components/Cart/index.js";
 
-export default function renderCartPage() {
-  return new Cart().render();
-}
+  export default function renderCartPage() {
+    return new Cart().render();
+  }
