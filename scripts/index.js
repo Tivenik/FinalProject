@@ -34,16 +34,7 @@ function renderPage() {
   let page;
   const hash = window.location.hash;
 
-  switch (hash) {
-    case '#catalog':
-      page = new Main().render();
-      break;
-    case '#cart':
-      page = new Cart().render();
-      break;
-    default:
-      page = new Main().render();
-  }
+  page = new Main().render();
 
   root.insertBefore(page, footer);
 }

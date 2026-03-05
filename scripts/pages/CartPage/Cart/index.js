@@ -4,15 +4,9 @@ import { openCheckoutModal } from "../../../Utils/Popup/index.js";
 
 class Cart {
     constructor() {
-        this.item = document.createElement('main');
-        this.item.classList.add('main');
-
         this.content = document.createElement('div');
         this.content.classList.add('content-page');
-
-        this.item.appendChild(this.content);
     }
-
 
     getCartItems() {
         const cart = getCookie('cart');
@@ -28,8 +22,8 @@ class Cart {
         document.dispatchEvent(new Event('cart-updated'));
     }
 
-    renderEmptyCart(target) {
-        target.innerHTML = `
+    renderEmptyCart() {
+        this.content.innerHTML = `
             <div class="cart-items">
                 <h2>Корзина пуста</h2>
             </div>
@@ -46,8 +40,8 @@ class Cart {
         const validItems = items.filter(item => item && item.price != null);
 
         if (validItems.length === 0) {
-            this.renderEmptyCart(this.content);
-            return this.item;
+            this.renderEmptyCart();
+            return this.content;
         }
 
         validItems.forEach((product, index) => {
@@ -87,7 +81,7 @@ class Cart {
         container.appendChild(bottomBlock);
 
         this.content.appendChild(container);
-        return this.item;
+        return this.content;
     }
 }
 

@@ -1,7 +1,7 @@
 import { createSlider } from "../../Utils/Slider/index.js";
 
 export default function renderHome(products, createProductCard) {
-  const container = document.createElement('div');
+  const container = document.createElement ('div');
   container.classList.add('content-page');
 
   const slider = createSlider ([
