@@ -1,12 +1,11 @@
+import App from "./components/App/App.js";
 import Header from "./components/Header/index.js";
-import Main from "./Main/index.js";
+import Main from "./components/Main/index.js";
 import Footer from "./components/Footer/index.js";
-import Cart from './components/Cart/index.js';
-import { setCookie, getCookie } from "./cookies/index.js";
+import Cart from './pages/CartPage/Cart/index.js';
 import { renderCartWidget } from "./Utils/Widget/index.js";
 
 const root = document.getElementById('root');
-
 const header = new Header().render();
 const footer = new Footer().render();
 
@@ -28,17 +27,6 @@ media.rel = 'stylesheet';
 media.href = 'css/media.css';
 document.head.appendChild(media);
 
-
-function addToCart(product) {
-  let cart = getCookie('cart');
-  cart = cart ? JSON.parse(cart) : [];
-
-  cart.push(product);
-
-  setCookie('cart', JSON.stringify(cart));
-  renderCartWidget();
-}
-
 function renderPage() {
   const oldMain = document.querySelector('main');
   if (oldMain) oldMain.remove();
@@ -46,28 +34,21 @@ function renderPage() {
   let page;
   const hash = window.location.hash;
 
-  if (hash.startsWith('#product/')) {
-    const id = parseInt(hash.split('/')[1]);
-    page = new ProductPage(id).render();
-  } else {
-    switch (hash) {
-      case '#catalog':
-        page = new Main().render();
-        break;
-      case '#cart':
-        page = new Cart().render();
-        break;
-      default:
-        page = new Main().render();
-    }
+  switch (hash) {
+    case '#catalog':
+      page = new Main().render();
+      break;
+    case '#cart':
+      page = new Cart().render();
+      break;
+    default:
+      page = new Main().render();
   }
 
   root.insertBefore(page, footer);
 }
 
 window.addEventListener('hashchange', renderPage);
-
-import App from "./components/App/App.js";
 
 const app = new App();
 

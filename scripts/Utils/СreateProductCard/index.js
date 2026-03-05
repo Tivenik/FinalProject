@@ -1,5 +1,5 @@
 import { hasSizes, calcPrice, calcWeight, getUnit, buildCartItem } from "../../Utils/ProductHelpers/index.js";
-import { getCookie, setCookie } from "../../cookies/index.js";
+import { getCookie, setCookie } from "../../Cookies/index.js";
 import { renderCartWidget } from "../Widget/index.js";
 import ProductPopup from "../ProductPopup/index.js";
 

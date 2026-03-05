@@ -1,12 +1,10 @@
-import { getCookie } from "../../cookies/index.js";
+import { getCookie } from "../../Cookies/index.js";
 
 export function renderCartWidget() {
   const cart = getCookie('cart');
   const items = cart ? JSON.parse(cart) : [];
 
   const validItems = items.filter(item => item && item.price != null);
-
-  const totalCount = validItems.length;
   const totalPrice = validItems.reduce((sum, item) => sum + item.price, 0);
 
   const widget = document.querySelector('.cart-widget');

@@ -1,5 +1,5 @@
-import createFeedbackForm from "../../components/Feedback/index.js";
-import { initFeedbackLogic } from "../../components/Feedback/logic.js";
+import createFeedbackForm from "../../Utils/Feedback/index.js";
+import { initFeedbackLogic } from "../../Utils/Feedback/logic.js";
 
 export default function renderVacanciesPage() {
   const page = document.createElement('div');

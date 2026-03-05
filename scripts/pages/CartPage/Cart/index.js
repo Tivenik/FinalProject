@@ -1,5 +1,5 @@
-import { getCookie, setCookie } from "../../cookies/index.js";
-import { openCheckoutModal } from "../../Utils/Popup/index.js";
+import { getCookie, setCookie } from "../../../Cookies/index.js";
+import { openCheckoutModal } from "../../../Utils/Popup/index.js";
 
 
 class Cart {

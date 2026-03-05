@@ -1,4 +1,4 @@
-import { setCookie } from "../../cookies/index.js";
+import { setCookie } from "../../Cookies/index.js";
 import { renderCartWidget } from "../Widget/index.js";
 
 
