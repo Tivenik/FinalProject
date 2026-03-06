@@ -2,15 +2,7 @@ import App from "./components/App/App.js";
 import Header from "./components/Header/index.js";
 import Main from "./components/Main/index.js";
 import Footer from "./components/Footer/index.js";
-import Cart from './pages/CartPage/Cart/index.js';
 import { renderCartWidget } from "./Utils/Widget/index.js";
-
-const root = document.getElementById('root');
-const header = new Header().render();
-const footer = new Footer().render();
-
-root.append(header, footer);
-renderCartWidget();
 
 const meta = document.createElement('meta');
 meta.name = "viewport";
@@ -27,19 +19,22 @@ media.rel = 'stylesheet';
 media.href = 'css/media.css';
 document.head.appendChild(media);
 
+
+const root = document.getElementById('root');
+const header = new Header().render();
+const footer = new Footer().render();
+
+root.append(header, footer);
+renderCartWidget();
+
 function renderPage() {
   const oldMain = document.querySelector('main');
   if (oldMain) oldMain.remove();
 
   let page;
-  const hash = window.location.hash;
-
   page = new Main().render();
-
   root.insertBefore(page, footer);
 }
-
-window.addEventListener('hashchange', renderPage);
 
 const app = new App();
 

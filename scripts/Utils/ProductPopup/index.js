@@ -52,7 +52,6 @@ class ProductPopup {
     document.body.appendChild(overlay);
     this.popup = overlay;
 
-    // Закрытие
     popup.querySelector('.popup-close').addEventListener('click', () => this.close());
     overlay.addEventListener('click', e => {
       if (e.target === overlay) this.close();
@@ -61,7 +60,6 @@ class ProductPopup {
     const priceEl = popup.querySelector('.price');
     const weightEl = popup.querySelector('.weight');
 
-    // Пересчёт цены и веса при выборе размера
     if (hasSizesFlag) {
       const sizeInputs = popup.querySelectorAll('input[name="popup-size"]');
 
@@ -76,7 +74,6 @@ class ProductPopup {
       });
     }
 
-    // Добавление в корзину
     popup.querySelector('.add-to-cart').addEventListener('click', () => {
       let size = null;
 

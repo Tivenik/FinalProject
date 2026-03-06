@@ -11,7 +11,6 @@ export default function createProductCard(product) {
   const hasSizesFlag = hasSizes(product);
   const unit = getUnit(product);
 
-
   card.innerHTML = `
     <div class="product-link">
       <img src="${product.image}" alt="${product.title}">

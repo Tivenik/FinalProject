@@ -31,7 +31,6 @@ export default function renderHome(products, createProductCard) {
     block.classList.add('category-block');
     block.id = category;
 
-
     const title = document.createElement('h2');
     title.textContent = category;
     block.appendChild(title);

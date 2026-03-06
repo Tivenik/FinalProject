@@ -150,7 +150,6 @@ class Header {
       }
     });
 
-
     closeBtn.addEventListener('click', () => {
       mobileMenu.classList.remove('active');
       burger.classList.remove('active');
