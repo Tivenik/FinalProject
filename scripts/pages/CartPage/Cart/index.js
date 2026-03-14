@@ -1,4 +1,4 @@
-import { getCookie, setCookie } from "../../../Cookies/index.js";
+import { getCookie, setCookie } from "../../../сookies/index.js";
 import { openCheckoutModal } from "../../../Utils/Popup/index.js";
 
 
@@ -49,10 +49,12 @@ class Cart {
             div.classList.add('cart-item');
 
             div.innerHTML = `
-                <h3>${product.title}</h3>
-                <p>${product.price} $</p>
-                <button class="remove-btn">Удалить</button>
-            `;
+                <div class="item-content">
+                    <h3>${product.title}</h3>
+                    <p>${product.price} $</p>
+                </div>
+                <button class="remove-btn">✕</button>
+            `;+
 
             div.querySelector('.remove-btn').addEventListener('click', () => {
                 this.removeItem(index);

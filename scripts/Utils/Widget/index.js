@@ -5,7 +5,9 @@ export function renderCartWidget() {
   const items = cart ? JSON.parse(cart) : [];
 
   const validItems = items.filter(item => item && item.price != null);
-  const totalPrice = validItems.reduce((sum, item) => sum + item.price, 0);
+  const totalPriceCents = validItems.reduce((sum, item) => sum + Math.round(item.price * 100), 0);
+  const totalPrice = (totalPriceCents / 100).toFixed(2);
+
 
   const widget = document.querySelector('.cart-widget');
   if (widget) {

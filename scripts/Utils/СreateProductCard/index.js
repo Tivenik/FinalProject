@@ -2,6 +2,7 @@ import { hasSizes, calcPrice, calcWeight, getUnit, buildCartItem } from "../../U
 import { getCookie, setCookie } from "../../Cookies/index.js";
 import { renderCartWidget } from "../Widget/index.js";
 import ProductPopup from "../ProductPopup/index.js";
+import { showToast } from "../Toast/index.js";
 
 export default function createProductCard(product) {
   const card = document.createElement('div');
@@ -67,7 +68,10 @@ export default function createProductCard(product) {
     let cart = JSON.parse(getCookie('cart') || "[]");
     cart.push(cartItem);
     setCookie('cart', JSON.stringify(cart));
+
     renderCartWidget();
+
+    showToast("Товар добавлен в корзину");
   });
 
   return card;

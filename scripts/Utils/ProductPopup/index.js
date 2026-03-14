@@ -2,6 +2,7 @@ import { getCookie, setCookie } from "../../Cookies/index.js";
 import { renderCartWidget } from "../Widget/index.js";
 import { hasSizes, calcPrice, calcWeight, getUnit, buildCartItem } 
 from "../../Utils/ProductHelpers/index.js";
+import { showToast } from "../Toast/index.js";
 
 class ProductPopup {
   constructor(product) {
@@ -88,6 +89,9 @@ class ProductPopup {
       setCookie('cart', JSON.stringify(cart));
 
       renderCartWidget();
+
+      showToast("Товар добавлен в корзину");
+
       this.close();
     });
   }

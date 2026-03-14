@@ -241,13 +241,13 @@ button:hover,
 .cart-item {
   display: flex;
   gap: 10px;
-  flex-direction: column;
   margin-bottom: 80px;
   padding-bottom: 30px;
   border-bottom: 1px solid #1a1a1a;
 }
 
 .cart-bottom{
+  max-width: 300px;
   display: flex;
   gap: 20px;
   flex-direction: column;
@@ -255,6 +255,10 @@ button:hover,
 
 .cart-summary strong {
   font-size: 25px;
+}
+
+.remove-btn {
+  margin-left: auto;
 }
 
 /*-------------------------ПОДВАЛ-------------------------------*/
@@ -516,13 +520,14 @@ footer {
   display: flex;
 }
 
+.remove-btn,
 .mobile-close {
   font-size: 26px;
   font-weight: bold;
   cursor: pointer;
   align-self: flex-end;
   margin-bottom: 10px;
-  padding: 5px;
+  padding: 10px;
   line-height: 1;
 }
 
@@ -701,4 +706,23 @@ footer {
 
 .slider-btn:hover {
   background: #000c;
+}
+
+#toast {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #333;
+  color: #fff;
+  padding: 12px 18px;
+  border-radius: 6px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+  font-size: 14px;
+  z-index: 9999;
+}
+
+#toast.show {
+  opacity: 1;
 }
