@@ -158,8 +158,17 @@ class Header {
   }
 
   render() {
+      this.item.querySelectorAll('a[href^="#"]').forEach(link => {
+      link.addEventListener('click', () => {
+        const widget = document.querySelector(".floating-cart-widget");
+        if (widget) widget.remove();
+        window.__floatingWidgetInstance = null;
+      });
+    });
+    
     return this.item;
   }
+  
 }
 
 export default Header;

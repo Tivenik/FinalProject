@@ -2,6 +2,7 @@ import { getCookie } from "../../Cookies/index.js";
 
 export default class FloatingCartWidget {
     constructor() {
+
         this.widget = document.createElement("div");
         this.widget.classList.add("floating-cart-widget");
 
@@ -13,7 +14,14 @@ export default class FloatingCartWidget {
 
         this.render();
 
-        document.addEventListener("cart-updated", () => this.render());
+        if (!window.__floatingWidgetListenerAdded) {
+            document.addEventListener("cart-updated", () => {
+                window.__floatingWidgetInstance?.render();
+            });
+            window.__floatingWidgetListenerAdded = true;
+        }
+
+        window.__floatingWidgetInstance = this;
     }
 
     getCartItems() {
@@ -39,6 +47,4 @@ export default class FloatingCartWidget {
             <span class="fw-total">${total.toFixed(2)} $</span>
         `;
     }
-
-    
 }

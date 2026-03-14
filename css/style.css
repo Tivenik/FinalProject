@@ -730,8 +730,8 @@ footer {
 
 .floating-cart-widget {
     position: fixed;
-    bottom: 20px;
-    right: 20px;
+    bottom: 8%;
+    right: 8%;
     border-radius: 300PX;
     background: #f06916;
     color: white;
