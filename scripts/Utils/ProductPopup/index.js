@@ -1,5 +1,6 @@
 import { getCookie, setCookie } from "../../Cookies/index.js";
 import { renderCartWidget } from "../Widget/index.js";
+import FloatingCartWidget from "../../Utils/FloatingWidget/index.js";
 import { hasSizes, calcPrice, calcWeight, getUnit, buildCartItem } 
 from "../../Utils/ProductHelpers/index.js";
 import { showToast } from "../Toast/index.js";
@@ -11,6 +12,11 @@ class ProductPopup {
   }
 
   open() {
+    const widget = document.querySelector(".floating-cart-widget")
+    if (widget) widget.remove();
+
+    window.floatingWidgetInstance = null;
+    
     const overlay = document.createElement('div');
     overlay.classList.add('popup-overlay');
 
@@ -90,6 +96,8 @@ class ProductPopup {
 
       renderCartWidget();
 
+      document.dispatchEvent(new Event("cart-updated"));
+
       showToast("Товар добавлен в корзину");
 
       this.close();
@@ -101,6 +109,13 @@ class ProductPopup {
       this.popup.remove();
       this.popup = null;
     }
+    
+    const oldWidget = document.getElementById("floating-cart-widget");
+    if (oldWidget) oldWidget.remove();
+  
+    const floatingWidget = new FloatingCartWidget();
+  
+    window.floatingWidgetInstance = floatingWidget;
   }
 }
 

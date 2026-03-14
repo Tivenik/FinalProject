@@ -2,6 +2,11 @@ import createFeedbackForm from "../../Utils/Feedback/index.js";
 import { initFeedbackLogic } from "../../Utils/Feedback/logic.js";
 
 export default function renderContactPage() {
+  const widget = document.querySelector(".floating-cart-widget")
+  if (widget) widget.remove();
+
+  window.floatingWidgetInstance = null;
+
   const page = document.createElement('div');
   page.classList.add('content-page');
 

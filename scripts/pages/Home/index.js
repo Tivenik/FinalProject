@@ -1,23 +1,22 @@
 import { createSlider } from "../../Utils/Slider/index.js";
+import FloatingCartWidget from "../../Utils/FloatingWidget/index.js";
 
 export default function renderHome(products, createProductCard) {
-  const container = document.createElement ('div');
+  const oldWidget = document.getElementById("floating-cart-widget");
+  if (oldWidget) oldWidget.remove();
+
+  const floatingWidget = new FloatingCartWidget();
+
+  window.floatingWidgetInstance = floatingWidget;
+
+  const container = document.createElement('div');
   container.classList.add('content-page');
 
-  const slider = createSlider ([
-  {
-    mobile: "image/slider1-mobile.jpg",
-    desktop: "image/slider1.jpg"
-  },
-  {
-    mobile: "image/slider2-mobile.jpg",
-    desktop: "image/slider2.jpg"
-  },
-  {
-    mobile: "image/slider3-mobile.jpg",
-    desktop: "image/slider3.jpg"
-  }
-]);
+  const slider = createSlider([
+    { mobile: "image/slider1-mobile.jpg", desktop: "image/slider1.jpg" },
+    { mobile: "image/slider2-mobile.jpg", desktop: "image/slider2.jpg" },
+    { mobile: "image/slider3-mobile.jpg", desktop: "image/slider3.jpg" }
+  ]);
 
   container.appendChild(slider);
 

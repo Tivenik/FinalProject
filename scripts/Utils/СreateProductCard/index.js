@@ -71,6 +71,8 @@ export default function createProductCard(product) {
 
     renderCartWidget();
 
+    document.dispatchEvent(new Event("cart-updated"));
+
     showToast("Товар добавлен в корзину");
   });
 

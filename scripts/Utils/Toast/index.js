@@ -1,5 +1,5 @@
 export function showToast(message) {
-    let toast = document.getElementById('toast');
+    let toast = document.querySelector('.toast');
 
     if (!toast) {
         toast = document.createElement('div');

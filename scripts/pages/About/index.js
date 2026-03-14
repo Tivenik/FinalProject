@@ -1,4 +1,9 @@
 export default function renderAbout() {
+  const widget = document.querySelector(".floating-cart-widget")
+  if (widget) widget.remove();
+
+  window.floatingWidgetInstance = null;
+
   const div = document.createElement('div');
   div.classList.add('content-page');
 

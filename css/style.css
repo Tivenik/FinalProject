@@ -658,6 +658,7 @@ footer {
     margin-bottom: 4px;
 }
 
+.fw-total,
 .cart-widget span {
   display: flex;
   gap: 10px;
@@ -708,13 +709,13 @@ footer {
   background: #000c;
 }
 
-#toast {
+.toast {
   position: fixed;
   bottom: 20px;
-  right: 20px;
+  right: 45%;
   background: #333;
   color: #fff;
-  padding: 12px 18px;
+  padding: 22px 28px;
   border-radius: 6px;
   opacity: 0;
   pointer-events: none;
@@ -723,6 +724,36 @@ footer {
   z-index: 9999;
 }
 
-#toast.show {
+.toast.show {
   opacity: 1;
+}
+
+.floating-cart-widget {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    border-radius: 300PX;
+    background: #f06916;
+    color: white;
+    padding: 30px 30px;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: width 0.2s ease, padding 0.2s ease;
+}
+
+.bi-basket {
+  width: 25px;
+}
+
+
+.floating-cart-widget .fw-total {
+    display: none;
+}
+.floating-cart-widget.open .fw-total {
+    display: inline;
 }

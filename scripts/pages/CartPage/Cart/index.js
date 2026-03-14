@@ -1,4 +1,4 @@
-import { getCookie, setCookie } from "../../../сookies/index.js";
+import { getCookie, setCookie } from "../../../Cookies/index.js";
 import { openCheckoutModal } from "../../../Utils/Popup/index.js";
 
 
