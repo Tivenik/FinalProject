@@ -13,9 +13,14 @@ class Main {
 
   getProducts() {
     const data = localStorage.getItem('products');
-    if (!data) return [];
-    const parsed = JSON.parse(data);
-    return Array.isArray(parsed) ? parsed : parsed.products;
+    if (!data) return []; // Если в хранилище пусто — возвращаем пустой массив
+    
+    try {
+      const parsed = JSON.parse(data);
+      return Array.isArray(parsed) ? parsed : (parsed.products || []);
+    } catch (e) {
+      return [];
+    }
   }
 
   render() {
@@ -27,11 +32,14 @@ class Main {
   updateContent() {
     this.item.innerHTML = "";
     const hash = window.location.hash;
-
     const products = this.getProducts();
 
-    let page;
+    if ((hash === '' || hash === '#') && products.length === 0) {
+      this.item.appendChild(this.renderNotFound());
+      return;
+    }
 
+    let page;
     switch (hash) {
       case '#about':
         page = renderAbout();
@@ -50,6 +58,16 @@ class Main {
     }
 
     this.item.appendChild(page);
+  }
+
+  renderNotFound() {
+
+    const img = document.createElement('img');
+    img.className = 'error';
+    img.src = 'image/error.png';
+    img.alt = 'Данные не загружены';
+
+    return img;
   }
 }
 

@@ -1,41 +1,42 @@
 import { getCookie } from "../../Cookies/index.js";
+import { calcPrice } from "../../Utils/ProductHelpers/index.js";
 
 export default class FloatingCartWidget {
     constructor() {
-
         this.widget = document.createElement("div");
         this.widget.classList.add("floating-cart-widget");
+        document.body.appendChild(this.widget);
 
         this.widget.addEventListener("click", () => {
             this.widget.classList.toggle("open");
         });
 
-        document.body.appendChild(this.widget);
-
+        document.addEventListener("cart-updated", () => this.render());
         this.render();
-
-        if (!window.__floatingWidgetListenerAdded) {
-            document.addEventListener("cart-updated", () => {
-                window.__floatingWidgetInstance?.render();
-            });
-            window.__floatingWidgetListenerAdded = true;
-        }
-
-        window.__floatingWidgetInstance = this;
     }
 
     getCartItems() {
-        const cart = getCookie("cart");
-        return cart ? JSON.parse(cart) : [];
+        return JSON.parse(getCookie("cart") || "[]");
     }
 
-    calculateTotal() {
+    async getTotal() {
+        const products = await fetch("http://localhost:3000/products").then(r => r.json());
         const items = this.getCartItems();
-        return items.reduce((sum, item) => sum + (item.price || 0), 0);
+
+        return items.reduce((sum, item) => {
+            const product = products.find(p => p.id === item.id);
+            if (!product) return sum;
+
+            const finalPrice = item.size
+                ? calcPrice(product.price, item.size)
+                : product.price;
+
+            return sum + finalPrice;
+        }, 0);
     }
 
-    render() {
-        const total = this.calculateTotal();
+    async render() {
+        const total = await this.getTotal();
 
         this.widget.innerHTML = `
             <div class="fw-icon">

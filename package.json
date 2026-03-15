@@ -1,17 +1,24 @@
 {
-  "name": "fp",
+  "name": "finalproject",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "server": "json-server --watch scripts/node/db.json --port 3000"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tivenik/FinalProject.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Tivenik/FinalProject/issues"
+  },
+  "homepage": "https://github.com/Tivenik/FinalProject#readme",
   "devDependencies": {
-    "json-server": "^1.0.0-beta.10"
+    "json-server": "^1.0.0-beta.13"
   }
 }

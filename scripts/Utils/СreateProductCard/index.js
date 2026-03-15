@@ -57,24 +57,23 @@ export default function createProductCard(product) {
   }
 
   card.querySelector('.add-to-cart').addEventListener('click', () => {
-    let size = null;
+      let size = null;
 
-    if (hasSizesFlag) {
-      size = [...sizeInputs].find(i => i.checked).value;
-    }
+      if (hasSizesFlag) {
+        size = [...sizeInputs].find(i => i.checked).value;
+      }
+      
+      const cartItem = { id: product.id, size };
 
-    const cartItem = buildCartItem(product, size);
+      let cart = JSON.parse(getCookie('cart') || "[]");
+      cart.push(cartItem);
+      setCookie('cart', JSON.stringify(cart));
 
-    let cart = JSON.parse(getCookie('cart') || "[]");
-    cart.push(cartItem);
-    setCookie('cart', JSON.stringify(cart));
-
-    renderCartWidget();
-
-    document.dispatchEvent(new Event("cart-updated"));
-
-    showToast("Товар добавлен в корзину");
+      renderCartWidget();
+      document.dispatchEvent(new Event("cart-updated"));
+      showToast("Товар добавлен в корзину");
   });
+
 
   return card;
 }
