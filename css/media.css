@@ -31,10 +31,6 @@
         padding: 20px 35px; 
     }
 
-    .nav-top {
-        justify-content: start;
-    }
-
     header div,
     nav ul {
         gap: 40px;
@@ -130,20 +126,11 @@
         max-width: 250px;
         border-bottom: #2c2c2c36 solid 1px;
     }
-
+    
     .nav-top {
-        justify-content: center;
+       display: none;
     }
-
-    .logo-top img{
-        max-width: 300px;
-    }
-
-    .logo-top {
-        display: flex;
-    }
-
-    .nav-top nav,
+    
     .nav-bottom nav {
         display: none;
     }

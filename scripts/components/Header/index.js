@@ -17,18 +17,6 @@ class Header {
     const topNav = document.createElement('div');
     topNav.classList.add('nav-top');
 
-    const logoTop = document.createElement('div');
-    logoTop.classList.add('logo-top');
-
-    const logoTopLink = document.createElement('a');
-    logoTopLink.href = '#';
-
-    const logoTopImg = document.createElement('img');
-    logoTopImg.src = '../image/logo-low.svg';
-
-    logoTopLink.append(logoTopImg);
-    logoTop.append(logoTopLink);
-
     const nav = document.createElement('nav');
     const ul = document.createElement('ul');
 
@@ -52,7 +40,7 @@ class Header {
 
     ul.append(liHome, liAbout, liCart);
     nav.append(ul);
-    topNav.append(nav, logoTop);
+    topNav.append(nav);
     this.item.append(topNav);
 
     // ----------НИЖНИЙ НАВИГАТОР (ЯКОРЬ)----------
